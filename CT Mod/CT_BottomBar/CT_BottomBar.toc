@@ -1,0 +1,8 @@
+## Interface: 30300
+## Version: 3.301 (CTMod 3.3)
+## Title: CT_BottomBar
+## Notes: Breaks up the main menu bar into movable pieces.
+## SavedVariables: CT_BottomBarOptions
+CT_Library.lua
+CT_BottomBar.lua
+CT_BottomBar_Addons.lua

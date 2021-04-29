@@ -1,0 +1,56 @@
+CT_Viewport (3.301)
+- Now attempts to prevent other addons from altering the size and position of the viewport.
+
+CT_Viewport (3.300)
+
+- Updated for the WoW 3.3 patch.
+- Added the /ctvp command which can be used to open the CT_Viewport window.
+- Now displays a basic options window in the CTMod Control Panel. It describes the slash commands available, and provides a button to open the CT_Viewport window.
+- Updated CT_Library.lua to version 3.005.
+
+CT_Libary.lua (3.005)
+
+Settings import
+- Fixed a problem with the settings import feature in the CTMod Control Panel where it was not properly importing frame positions.
+- Fixed a problem where there would be more than one "Settings Import" item listed in the CTMod Control Panel when more than one version of CT_Library.lua was encountered.
+- The settings import window now defaults to the first character on the first server that has importable options.
+- Added the ability to delete settings.
+
+Slash command
+- Added the /ctmod command as an alternative to the existing /ct command. Either one will open the CTMod Control Panel.
+- Added code to allow direct access to an addon's options window via a slash command (refer to individual addons for any slash commands that may have been added).
+
+General
+- The scrollbar in the options window resets to the top when you select a different addon.
+- The message at the top of the CTMod Control panel now mentions the slash commands that can be used to open it.
+- Some variables and functions which were global are now correctly declared as local.
+- Updated CT_Library.lua to version 3.005.
+
+-----
+
+CT_Viewport (3.200)
+- Updated for the WoW 3.2 patch.
+
+CT_Viewport (3.005)
+- Updated for the WoW 3.1 patch.
+- Updated CT_Library.lua to version 3.004.
+
+CT_Library.lua (3.004)
+- Fixed a nil value error when the client's locale was not recognized.
+
+CT_Viewport (3.003)
+- Updated CT_Library.lua to version 3.003.
+
+CT_Viewport (3.002)
+- Updated CT_Library.lua to version 3.002.
+
+CT_Library (3.002)
+- Fixed a bug that was causing some text to be aligned incorrectly in some of the addons.
+- Corrected a spelling mistake on the CTMod Control panel window.
+
+CT_ViewPort (3.001)
+- Updated CT_Library.lua
+
+CT_Viewport (3.000)
+- Updated for the WoW 3.0 patch.
+- No longer shows the letter "r" after the current aspect ratio when it is less than 1.

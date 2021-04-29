@@ -1,0 +1,115 @@
+CT_BuffMod (3.303)
+- Added a "Show drag and resize tooltips" option (default is enabled).
+- Added a "Reset window position" button to the CT_BuffMod options window.
+- Right-clicking the CT_BuffMod window when it is unlocked no longer resets the window's position.
+
+CT_BuffMod (3.302)
+- Fixed a problem that was sometimes causing an expiration warning message to be displayed more than once for the same spell.
+- Fixed a problem that was causing the expiration warning timers to not always be saved correctly.
+- The sliders for the expiration warning timers now display the number of seconds when the setting is over 1 minute, and they can now each be set to the "Off" position.
+- Fixed a problem that was preventing the time remaining bar for weapon buffs from updating correctly.
+- Added an option to show buffs (default is enabled).
+- Added an option to show debuffs (default is enabled).
+- Added an option to show auras (default is enabled).
+- Added an option to show tooltips (default is enabled).
+- Added an option to show weapon details in the tooltip for weapon buffs (default is enabled).
+- Added an option to show the spell number in the tooltip (default is disabled).
+- Added an option to show the name of the caster (if known) in the tooltip (default is enabled). If the caster is a pet or vehicle, then the pet/vehicle's owner is also shown if they are in your party/raid.
+- Added an option to lock a buff's position within the window when the mouse is over its icon (default is enabled). This makes it easier to cancel a buff, or view its tooltip, when you are gaining or losing other buffs at the same time.
+
+CT_BuffMod (3.301)
+
+Buff options
+- Added an option to center the duration if not showing the buff name.
+
+CT_BuffMod (3.300)
+
+- Updated for the WoW 3.3 patch.
+- Added options to hide Blizzard's temporary enchants frame, buffs frame, and consolidated buffs frame. All 3 frames are hidden by default.
+- Added an option to prevent the CT_BuffMod window from being moved off screen.
+- Hiding the CT_BuffMod window's border no longer prevents the window from being positioned at the very edges of the screen.
+- Added the /ctbuff command which can be used to directly open the CT_BuffMod options window.
+- Some variables and functions which were global are now correctly declared as local.
+- Updated CT_Library.lua to version 3.005.
+
+CT_Libary.lua (3.005)
+
+Settings import
+- Fixed a problem with the settings import feature in the CTMod Control Panel where it was not properly importing frame positions.
+- Fixed a problem where there would be more than one "Settings Import" item listed in the CTMod Control Panel when more than one version of CT_Library.lua was encountered.
+- The settings import window now defaults to the first character on the first server that has importable options.
+- Added the ability to delete settings.
+
+Slash command
+- Added the /ctmod command as an alternative to the existing /ct command. Either one will open the CTMod Control Panel.
+- Added code to allow direct access to an addon's options window via a slash command (refer to individual addons for any slash commands that may have been added).
+
+General
+- The scrollbar in the options window resets to the top when you select a different addon.
+- The message at the top of the CTMod Control panel now mentions the slash commands that can be used to open it.
+- Some variables and functions which were global are now correctly declared as local.
+
+-----
+
+CT_BuffMod (3.200)
+- Updated for the WoW 3.2 patch.
+
+CT_BuffMod (3.012)
+- Internal changes and fixes.
+
+CT_BuffMod (3.011)
+- Fixed a bug that was sometimes causing buff names to be displayed in red when the "Color code debuff names" option was enabled and the "Color buffs" option was disabled.
+- Fixed a bug that was sometimes causing the items to be sorted incorrectly when the "Reverse the direction of sort" option was enabled.
+
+CT_BuffMod (3.010)
+- The addon now recycles previously created frames and font strings instead of creating new ones for each buff.
+- Fixed some text display issues when using a narrow window.
+- Added an option to control the vertical direction that the window grows and can be resized (upwards, downwards, outwards).
+-- This new option can be found in the 'Window Options' section.
+-- This setting is used when the 'Auto expand window height' option is enabled, and also when manually resizing the window.
+-- To manually resize the window when upwards resizing is selected, drag the window's upper right corner.
+-- To manually resize the window when downwards (or outwards) resizing is selected, drag the window's lower right corner.
+-- The default direction is downwards.
+
+CT_BuffMod (3.009)
+- When you are in a vehicle it now shows the buffs, debuffs, and auras on the vehicle instead of the ones on you.
+- Fixed a bug that was creating a new frame (instead of re-using an existing one) each time an item was added to the window.
+- Fixed a bug that could cause a time value to be displayed on an aura when a buff or debuff above it faded.
+
+CT_BuffMod (3.008)
+- Updated for the WoW 3.1 patch.
+- Updated CT_Library.lua to version 3.004.
+
+CT_Library.lua (3.004)
+- Fixed a nil value error when the client's locale was not recognized.
+
+CT_BuffMod (3.006)
+- Fixed a problem that was causing a display issue when two buffs had the same icon (such as Aspect of the Pack and the Striped Frostsaber mount).
+- Fixed an addon_action_blocked error which could occur during combat.
+
+CT_BuffMod (3.005)
+- Fixed a bug which could cause an "attempt to index local 'tblEntry' (a nil value)" error when there were weapon buffs.
+- Fixed a bug which could cause an "attempt to index local 'color' (a nil value)" error when the "Color Code Debuff Names" option was enabled.
+- Updated CT_Library.lua to version 3.003.
+
+CT_BuffMod (3.004)
+- When sorting by Type you can now choose the sequence in which the addon displays the different types of buffs.
+- Added an option to reverse the direction of the sort.
+- Updated CT_Library.lua to version 3.002.
+
+CT_Library (3.002)
+- Fixed a bug that was causing some text to be aligned incorrectly in some of the addons.
+- Corrected a spelling mistake on the CTMod Control panel window.
+
+CT_BuffMod (3.003)
+- You can now reset CT_BuffMod options for just your current character, or for all of your characters. To reset the options for all characters you must first select the checkbox above the reset button.
+
+CT_BuffMod (3.002)
+- Updated CT_Library.lua
+
+CT_BuffMod (3.001)
+- Right clicking on an aura will now cancel it. This includes mounts, but does not include shapeshift forms. Due to a change by Blizzard, cancelling a shapheshift form now requires a secure action button.
+- Right clicking on a debuff no longer cancels a buff or aura.
+
+CT_BuffMod (3.000)
+- Updated for the WoW 3.0 patch.

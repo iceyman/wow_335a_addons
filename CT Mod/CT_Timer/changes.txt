@@ -1,0 +1,59 @@
+CT_Timer (3.301)
+- Added a missing reference to CT_Library.lua. This fixes the error "attempt to index global 'CT_Library' (a nil value)" that was occurring when CT_Timer was the first CTMod addon to load.
+
+CT_Timer (3.300)
+
+- Updated for the WoW 3.3 patch.
+- CT_Timer now appears in the list of addons in the CTMod Control Panel.
+- Now displays a basic options window in the CTMod Control Panel. It describes the slash commands available, provides a button to open/close the CT_Timer window, and provides a button to open the CT_Timer options window.
+- The CT_Timer window can no longer be dragged off screen.
+- Updated CT_Library.lua to version 3.005.
+
+CT_Libary.lua (3.005)
+
+Settings import
+- Fixed a problem with the settings import feature in the CTMod Control Panel where it was not properly importing frame positions.
+- Fixed a problem where there would be more than one "Settings Import" item listed in the CTMod Control Panel when more than one version of CT_Library.lua was encountered.
+- The settings import window now defaults to the first character on the first server that has importable options.
+- Added the ability to delete settings.
+
+Slash command
+- Added the /ctmod command as an alternative to the existing /ct command. Either one will open the CTMod Control Panel.
+- Added code to allow direct access to an addon's options window via a slash command (refer to individual addons for any slash commands that may have been added).
+
+General
+- The scrollbar in the options window resets to the top when you select a different addon.
+- The message at the top of the CTMod Control panel now mentions the slash commands that can be used to open it.
+- Some variables and functions which were global are now correctly declared as local.
+- Updated CT_Library.lua to version 3.005.
+
+-----
+
+CT_Timer (3.200)
+- Updated for the WoW 3.2 patch.
+
+CT_Timer (3.006)
+- Updated for the WoW 3.1 patch.
+- Updated CT_Library.lua to version 3.004.
+
+CT_Library.lua (3.004)
+- Fixed a nil value error when the client's locale was not recognized.
+
+CT_Timer (3.004)
+- Updated CT_Library.lua to version 3.003.
+
+CT_Timer (3.003)
+- Updated CT_Library.lua to version 3.002.
+
+CT_Library (3.002)
+- Fixed a bug that was causing some text to be aligned incorrectly in some of the addons.
+- Corrected a spelling mistake on the CTMod Control panel window.
+
+CT_Timer (3.002)
+- Updated CT_Library.lua
+
+CT_Timer (3.001)
+- Left clicking the timer no longer causes an error.
+
+CT_Timer (3.000)
+- Updated for the WoW 3.0 patch.

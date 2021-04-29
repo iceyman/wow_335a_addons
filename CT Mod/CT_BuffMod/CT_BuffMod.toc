@@ -1,0 +1,11 @@
+## Interface: 30300
+## Version: 3.303 (CTMod 3.3)
+## Title: CT_BuffMod
+## Notes: Customizable buff display
+## SavedVariables: CT_BuffModOptions
+CT_Library.lua
+CT_BuffMod.lua
+CT_BuffMod_Parsing.lua
+CT_BuffMod_Options.lua
+localization.lua
+Bindings.xml

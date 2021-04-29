@@ -1,0 +1,7 @@
+## Interface: 30300
+## Version: 3.301 (CTMod 3.3)
+## Title: CT_Timer
+## Notes: Shows a timer that counts both up and down.
+## SavedVariables: CT_Timer
+CT_Library.lua
+CT_Timer.xml
