@@ -1,0 +1,13 @@
+## Interface: 30300
+## Version: 3.304 (CTMod 3.3)
+## Title: CT_BarMod
+## Notes: Intuitive yet powerful action bar addon.
+## SavedVariables: CT_BarModOptions
+## OptionalDeps: CT_BottomBar
+CT_Library.lua
+CT_BarMod.lua
+CT_BarMod_Groups.lua
+CT_BarMod_Edit.lua
+CT_BarMod_Use.lua
+CT_BarMod_Shift.lua
+CT_BarMod_Options.lua

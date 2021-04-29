@@ -1,0 +1,7 @@
+## Interface: 30300
+## Version: 3.300 (CTMod 3.3)
+## Title: CT_ExpenseHistory
+## Notes: Detailed log of character expenses
+## SavedVariables: CT_EH_History
+CT_Library.lua
+CT_ExpenseHistory.xml

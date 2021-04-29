@@ -1,0 +1,93 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="localization.lua"/>
+	<Script file="localization.ge.lua"/>
+	<Script file="localization.fr.lua"/>
+	<Script file="CT_PlayerFrame.lua"/>
+	<Frame name="CT_PlayerFrame" parent="PlayerFrame">
+		<Scripts>
+			<OnLoad>
+				TargetFrame:ClearAllPoints();
+				TargetFrame:SetPoint("LEFT", "PlayerFrame", "RIGHT", 50, 0);
+				self:RegisterEvent("PLAYER_REGEN_DISABLED");
+				self:RegisterEvent("PLAYER_REGEN_ENABLED");
+				self:RegisterEvent("PLAYER_ENTERING_WORLD");
+			</OnLoad>
+			<OnEvent>
+				CT_PlayerFrameOnEvent(self, event, ...);
+			</OnEvent>
+			<OnUpdate>
+				CT_PlayerFrameOnUpdate(self, elapsed);
+			</OnUpdate>
+		</Scripts>
+		<Frames>
+			<Frame setAllPoints="true">
+				<Frames>
+					<Frame setAllPoints="true">
+						<Layers>
+							<Layer level="OVERLAY">
+								<FontString name="CT_PlayerHealthRight" inherits="GameFontNormalSmall" text="">
+									<Anchors>
+										<Anchor point="LEFT" relativeTo="PlayerFrame" relativePoint="TOPRIGHT">
+											<Offset>
+												<AbsDimension x="-5" y="-46"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+								</FontString>
+								<FontString name="CT_PlayerManaRight" inherits="GameFontNormalSmall" text="">
+									<Anchors>
+										<Anchor point="LEFT" relativeTo="PlayerFrame" relativePoint="TOPRIGHT">
+											<Offset>
+												<AbsDimension x="-5" y="-57"/>
+											</Offset>
+										</Anchor>
+									</Anchors>
+								</FontString>
+							</Layer>
+						</Layers>
+						<Frames>
+							<Button name="CT_PlayerFrame_Drag" frameStrata="LOW" hidden="false" movable="true" toplevel="true">
+								<Size>
+									<AbsDimension x="100" y="20"/>
+								</Size>
+								<Anchors>
+									<Anchor point="TOPLEFT" relativeTo="UIParent" relativePoint="TOPLEFT">
+										<Offset>
+											<AbsDimension x="97" y="-25"/>
+										</Offset>
+									</Anchor>
+								</Anchors>
+								<Scripts>
+									<OnEnter>
+										GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT");
+										GameTooltip:SetText("|c00FFFFFFPlayer Frame|r\nLeft-click to drag.\nRight-click to reset.");
+									</OnEnter>
+									<OnLeave>
+										GameTooltip:Hide();
+									</OnLeave>
+									<OnMouseDown>
+										if ( button == "LeftButton" ) then
+											self:StartMoving();
+										elseif ( button == "RightButton" ) then
+											if (not InCombatLockdown()) then
+												CT_UnitFrames_ResetPosition(self:GetName());
+												CT_UnitFrames_ResetDragLink(self:GetName());
+											end
+										end
+									</OnMouseDown>
+									<OnMouseUp>
+										self:StopMovingOrSizing();
+									</OnMouseUp>
+									<OnLoad>
+										CT_UnitFrames_ResetDragLink(self:GetName());
+									</OnLoad>
+								</Scripts>
+							</Button>
+						</Frames>
+					</Frame>
+				</Frames>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>
