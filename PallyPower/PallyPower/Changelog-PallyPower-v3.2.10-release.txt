@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r115 | aznamir | 2009-12-27 03:37:05 +0000 (Sun, 27 Dec 2009) | 1 line
+Changed paths:
+   A /tags/v3.2.10-release (from /trunk:114)
+
+Tagging as v3.2.10-release
+------------------------------------------------------------------------
+r114 | aznamir | 2009-12-27 03:33:33 +0000 (Sun, 27 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/PallyPower.lua
+
+Increased the interval between REQ messages acceptable by PallyPower. Now only responding to messages sent with 15+ sec intervals to prevent the torrent of spam caused by ZomgBuffs and RaidBuffStatus.
+------------------------------------------------------------------------
+r112 | aznamir | 2009-12-09 00:33:53 +0000 (Wed, 09 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/PallyPower.toc
+
+.toc bump
+------------------------------------------------------------------------
+r111 | aznamir | 2009-12-09 00:31:27 +0000 (Wed, 09 Dec 2009) | 1 line
+Changed paths:
+   M /trunk/locale/esES.lua
+
+updated spanish locale
+------------------------------------------------------------------------
